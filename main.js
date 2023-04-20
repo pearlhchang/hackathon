@@ -1,34 +1,26 @@
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-// 		'X-RapidAPI-Host': 'ronreiter-meme-generator.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://ronreiter-meme-generator.p.rapidapi.com/meme?top=Top%20Text&bottom=Bottom%20Text&meme=Condescending-Wonka&font_size=50&font=Impact', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-//     .catch(err => console.error(err));
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector("button");
+    function generateMeme() {
+        const imagesContainer = document.querySelector("div");
+        const endpoint = "https://dog.ceo/api/breeds/image/random";
+        fetch(endpoint)
+        .then((data) => data.json())
+        .then((data) => {
+            // const memes = data.data.memes;
+            // //iterating through all images on page
+            // const meme = memes[Math.floor(Math.random() * memes.length)];
+            // // select a random meme from the meme array
+            const img = new Image();
+            console.log(data.message)
+            img.src = data.message;
+            imagesContainer.appendChild(img);
+            //setting to a new picture
+        });
+     
+    }
     
-const button = document.querySelectorAll('#button');
+    button.addEventListener("click", generateMeme);
 
-function replaceAllimages() {
-    const img = document.querySelectorAll('img'); 
-    img.forEach(image => {
-        fetch('https://api.imgflip.com/get_memes')
-            .then(data => data.json())
-            .then(data => {
-                console.log(data); 
-                image.src = data.url; //are all the images gonna be the same meme 
-            })
-    });
-}
-
-replaceAllimages();
+});
 
 
-// button.addEventListener('click', e => {
-//     replaceAllimages(); 
-// })
