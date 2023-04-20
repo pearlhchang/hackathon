@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.fontSize = '40px';
             button.style.padding = '10px 20px';
             header.style.display = 'none';
+            
+
         });
     }
     button.addEventListener("click", generateMeme);
