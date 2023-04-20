@@ -1,11 +1,11 @@
 {
-  "name": "Get Meme",
+  "name": "Pupparazzi",
   "version": "1.0.0",
   "description": "This extension changes images on a webpage to random memes",
   "manifest_version": 3,
   "author": "Mahir and Pearl",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Get Meme"
+    "default_title": "Pupparazzi"
   }
 }
