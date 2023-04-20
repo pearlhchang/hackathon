@@ -3,6 +3,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  color: white;
+  font-size: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 button {
   padding: 15px 20px;
   border: 1px solid white;
@@ -12,6 +21,9 @@ button {
   border-radius: 10px;
   cursor: pointer;
   margin: 10px;
+  
+  margin-left: 45px;
+  margin-bottom: 20px;
 }
 
 button:hover {
